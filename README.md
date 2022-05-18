@@ -16,20 +16,27 @@ required command line utilities:
 - meteor (all except this one are checked by script `check.requirements.bat`)
 
 1. Check if majority of necessary commands are available on the system. !!! `meteor` is not checked
-> check.requirements.bat
+```bash
+check.requirements.bat
+```
 
 2. Download all git repositories, build and install dependencies. Takes a minute or so depending on speed of the network at hands
-> setup.bat
+```bash
+setup.bat
+```
 
 3. For this step support from developers of data-shape-server will be needed. The special access has to be granted and set int `.env` file
-> START /W notepad.exe data-shape-server\server\.env
-
-
-3. Download Wikidata dump (~6h)
-> download.wikidata.dump.bat
-
-4. Process dump (~60 hours)
+```bash
+START /W notepad.exe data-shape-server\server\.env
 ```
+
+4. Download Wikidata dump (~6h)
+```bash
+download.wikidata.dump.bat
+```
+
+5. Process dump (~60 hours)
+```bash
 # for simplicity do in "SparqlForHumans.CLI" folder
 cd SPARQLforHumans/SPARQLforHumans.CLI
 
@@ -60,4 +67,6 @@ dotnet run -- -i latest-truthy.filterAll-Sorted.gz -p
 # Running
 
 1. Run all environments. After 15 seconds ViziQuer page will open up in default web-browser app. User: admin@admin.com ; Password: admin
-> run.bat
+```bash
+run.bat
+```
