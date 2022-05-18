@@ -54,7 +54,7 @@ gzip -dc latest-truthy.filterAll.gz | LANG=C sort -S 200M --parallel=16 -T /tmp 
 
 # build entity and property index. It takes ~35h and ~2h accordingly
 # now indexing command supports BaseFolder configurability (-b <path>). by default it is set to
-# "%userprofile%\SparqlForHumans". This path will be required for server configuration to look 
+# "%userprofile%\SparqlForHumans\Wikidata". This path will be required for server configuration to look 
 # indexes into. REMARK: both indexes are expected to be in the same BaseFolder.
 dotnet run -- -i latest-truthy.filterAll-Sorted.gz -e 
 dotnet run -- -i latest-truthy.filterAll-Sorted.gz -p
